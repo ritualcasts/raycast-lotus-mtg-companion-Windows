@@ -1,3 +1,4 @@
+import { Color } from "@raycast/api";
 import { Mana, ScryfallCard } from "../types";
 
 export function getCardImage(card: ScryfallCard) {
@@ -36,7 +37,7 @@ export function formatRarityName(card: ScryfallCard) {
 export function getRarityColor(card: ScryfallCard) {
     switch (card.rarity.toLowerCase()) {
         case "common":
-            return "raycast-primary-text";
+            return Color.PrimaryText;
         case "uncommon":
             return "#AACADA";
         case "rare":
@@ -44,7 +45,7 @@ export function getRarityColor(card: ScryfallCard) {
         case "mythic":
             return "#DB7B3B";
         default:
-            return "raycast-primary-text";
+            return Color.PrimaryText;
     }
 }
 
@@ -61,6 +62,6 @@ function getFormattedMana(mana: string) {
         case "G":
             return { color: "#5DC553", symbol: "G" };
         default:
-            return { color: "raycast-primary-text", symbol: mana };
+            return { color: Color.PrimaryText, symbol: mana };
     }
 }

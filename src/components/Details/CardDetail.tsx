@@ -94,12 +94,12 @@ ${cardRulings && cardRulings.data.length > 0 ? `### Rulings\n\n ${cardRulings.da
                             <Detail.Metadata.TagList title="Prices">
                                 <Detail.Metadata.TagList.Item
                                     text={`$${card.prices.usd}`}
-                                    color={"raycast-primary-text"}
+                                    color={Color.PrimaryText}
                                 />
                                 {card.prices.usd_foil && (
                                     <Detail.Metadata.TagList.Item
                                         text={`Foil: $${card.prices.usd_foil}`}
-                                        color={"raycast-primary-text"}
+                                        color={Color.PrimaryText}
                                     />
                                 )}
                             </Detail.Metadata.TagList>
